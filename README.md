@@ -20,9 +20,13 @@ To use `recipe` in for template rendering set `template.recipe=fop-xsl-pdf` in t
         outType: '...'}
 }
 ```
+
 Set xsl template in content or create it as template and use by name/id
+
 Set xml data in the data field
+
 Optional:
+
 Set FileName in outName and FileType in outType(FileType - is a available type for Fop which are used) 
 
-It is possible to use fop.xconf. It should be added in the root directory.
+It is possible to use fop.xconf. It should be added to the root directory.
