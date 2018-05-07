@@ -1,4 +1,4 @@
-var main = require('./lib/fop.js')
+var main = require('./lib/fop_xsl.js')
 var config = require('./jsreport.config.js')
 
 module.exports = function (options) {

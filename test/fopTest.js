@@ -14,8 +14,13 @@ describe('fop pdf', function () {
   })
 
   it('should not fail when rendering', function () {
+    this.timeout(10000);
     var request = {
-      template: { content: fs.readFileSync(path.join(__dirname, '/test.fo')), recipe: 'fop-pdf', engine: 'none' }
+      template: { content: fs.readFileSync(path.join(__dirname, '/test.xsl')),
+        recipe: 'fop-xsl-pdf',
+        engine: 'none' },
+      data:fs.readFileSync(path.join(__dirname, '/test.json'))
+
     }
 
     return reporter.render(request, {}).then(function (response) {

@@ -1,5 +1,6 @@
 module.exports = {
-  'name': 'fop-pdf',
-  'main': 'lib/fop.js',
-  'hasPublicPart': false
-}
+  'name': 'fop-xsl-pdf',
+  'main': 'lib/fop_xsl.js',
+  'hasPublicPart': false,
+
+};
