@@ -22,7 +22,7 @@ describe('fop pdf', function () {
       data: {data: '<name>Frank</name>'}
     }
 
-    return reporter.render(request, {}).then(function (response) {
+    return reporter.render(request).then(function (response) {
       response.content.toString().should.containEql('%PDF')
     })
   })
@@ -37,7 +37,7 @@ describe('fop pdf', function () {
         outType: 'rtf'}
     }
 
-    return reporter.render(request, {}).then(function (response) {
+    return reporter.render(request).then(function (response) {
       response.headers['Content-Disposition'].toString().should.containEql('rtf')
     })
   })
@@ -53,7 +53,7 @@ describe('fop pdf', function () {
         outType: 'rtf'}
     }
 
-    return reporter.render(request, {}).then(function (response) {
+    return reporter.render(request).then(function (response) {
       response.headers['Content-Disposition'].toString().should.containEql('TestName_NameTest')
     })
   })
